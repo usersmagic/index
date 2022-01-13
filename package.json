@@ -1,0 +1,35 @@
+{
+  "name": "en.usersmagic.com",
+  "version": "1.0.0",
+  "description": "Landing page under the subdomain en.usersmagic.com",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usersmagic/en.usersmagic.git"
+  },
+  "engines": {
+    "node": "14.17.0"
+  },
+  "author": "Yunus Gürlek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/usersmagic/en.usersmagic/issues"
+  },
+  "homepage": "https://github.com/usersmagic/en.usersmagic#readme",
+  "dependencies": {
+    "async": "^3.2.3",
+    "body-parser": "^1.19.1",
+    "cluster": "^0.7.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.14",
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0",
+    "validator": "^13.7.0"
+  }
+}

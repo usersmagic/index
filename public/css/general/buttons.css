@@ -1,0 +1,128 @@
+.general-seablue-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(46, 197, 206, 1);
+  padding: 4px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 3px;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+.general-seablue-button span {
+  color: rgb(254, 254, 254);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.general-slider-button {
+  width: 13.5px;
+  height: 8px;
+  padding: 1px;
+  border-radius: 4px;
+  background-color: rgb(196, 196, 196);
+  cursor: pointer;
+}
+.general-slider-button div {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgb(254, 254, 254);
+  margin-left: 0px;
+}
+.general-slider-button-slide-right-animation-class {
+  animation: slideRight 0.2s ease-in-out 0s 1 forwards;
+  -webkit-animation: slideRight 0.2s ease-in-out 0s 1 forwards;
+}
+.general-slider-button-slide-left-animation-class {
+  animation: slideLeft 0.2s ease-in-out 0s 1 forwards;
+  -webkit-animation: slideLeft 0.2s ease-in-out 0s 1 forwards;
+}
+
+.general-seablue-border-button {
+  height: 27.5px;
+  min-height: 27.5px;
+  margin-bottom: 7.5px;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 3.5px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid rgba(46, 197, 206, 0.8);
+  color: rgba(46, 197, 206, 0.8);
+}
+.general-seablue-border-button:hover {
+  border: 1px solid rgba(46, 197, 206, 1);
+  color: rgba(46, 197, 206, 1);
+}
+.general-seablue-border-button span {
+  font-weight: 600;
+  font-size: 6px;
+}
+.general-red-border-button {
+  height: 27.5px;
+  min-height: 27.5px;
+  margin-bottom: 7.5px;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 3.5px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid rgba(255, 0, 0, 0.8);
+  color: rgba(255, 0, 0, 0.8);
+}
+.general-red-border-button:hover {
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+.general-red-border-button span {
+  font-weight: 600;
+  font-size: 6px;
+}
+
+@keyframes slideRight {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 5.5px;
+  }
+}
+@-webkit-keyframes slideRight {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 5.5px;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    margin-left: 5.5px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    margin-left: 5.5px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}

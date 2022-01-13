@@ -1,0 +1,691 @@
+
+.all-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.all-inner-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 100px;
+}
+
+.all-inner-wrapper-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-blue-circle {
+  position: static;
+  width: 500px;
+  height: 500px;
+  border-radius: 100px;
+  background: #2EC5CE;
+  filter: blur(50px);
+  margin-right: -450px;
+  margin-top: -450px;
+}
+
+.usersmagic-logo {
+  width: 155px;
+  height: 30px;
+  margin-bottom: 200px;
+}
+
+.usersmagic-small-blue-logo {
+  width: 61px;
+}
+
+.each-report-title {
+  font: 900 96px "manrope";
+  margin-bottom: 50px;
+}
+
+.each-report-description {
+  font: 900 36px "manrope";
+  color: rgb(254, 211, 85);
+  width: 60%;
+  margin-bottom: 100px;
+}
+
+.reports-key-insights-wrapper {
+  margin-bottom: 200px;
+}
+
+.reports-key-insight-title {
+  font: 800 36px "manrope";
+}
+
+.each-key-insight {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.each-key-insight-row-number {
+  padding: 10px 20px;
+  background-color: rgb(254, 211, 85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 800 24px "manrope";
+  border-radius: 100%;
+  margin-right: 30px;
+}
+
+.each-key-insight-description {
+  font: 600 18px "manrope";
+}
+
+.consumer-graphs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.consumer-wrapper-title {
+  font: 900 36px "manrope";
+  margin-bottom: 100px;
+}
+
+.each-graph {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -10px;
+}
+
+.each-graph-header {
+  display: flex;
+  align-items: center;
+}
+
+.each-graph-header-title {
+  font: 500 24px "manrope";
+  text-align: center;
+  width: 400px;
+}
+
+.each-graph-header-row-number {
+  width: 39px;
+  height: 39px;
+  background-color: rgb(254, 211, 85);
+  display: flex;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  font: 800 24px "manrope";
+  border-radius: 100%;
+  margin-right: 30px;
+}
+
+.each-bar-graph-content {
+  width: 577px;
+  height: 450px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.each-background-row {
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+  justify-content: space-between;
+}
+
+.each-background-row span {
+  font: 900 10px "manrope";
+}
+.bar-graph-background-wrapper {
+  width: 100%;
+  height: 94.8%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.each-background-row hr {
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.356);
+  border: 0;
+  height: 1px;
+}
+
+.bar-graph-columns-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 60px;
+  justify-content: space-between;
+}
+.each-column-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.each-bar-label {
+  font: 400 8px "manrope";
+  width: 40px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.each-bar {
+  width: 40px;
+  background-color: rgb(134,221,212);
+}
+
+.each-doughnut-graph-content {
+  width: 577px;
+  height: 450px;
+  position: relative;
+}
+
+.white-circle-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white-circle-centered {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doughnut-labels-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.doughnut-each-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+}
+
+.doughnut-label-percentage {
+  font: 900 12px "manrope";
+}
+.doughnut-label-percentage-label {
+  font: 600 8px "manrope";
+  color: rgb(0,0,0);
+}
+
+.white-circle-centered {
+  font: 900 18px "manrope";
+}
+
+.white-circle-centered-thin-line-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 100%;
+  position: absolute;
+}
+
+.dougnut-graph-circle-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doughnut-circle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 105px solid transparent;
+  border-right: 105px solid transparent;
+  border-top: 110px solid;
+  border-bottom: 100px solid transparent;
+  border-radius: 100%;
+}
+
+.seablue-button {
+  margin-top: 40px;
+  color: rgb(254, 254, 254);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgb(46, 197, 206);
+  box-shadow: 0 0 20px rgb(210, 210, 210);
+  width: 290px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seablue-button:hover {
+  box-shadow: 0 0 20px rgb(200, 200, 200);
+}
+
+.reports-ending-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reports-ending-left-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.reports-ending-right-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.get-started-text {
+  width: 600px;
+  font: 900 64px "manrope";
+}
+
+.ending-yellow-gradient {
+  width: 200.51px;
+  height: 400px;
+  margin-top: 200px;
+  margin-right: -100px;
+  background: #FED355;
+  filter: blur(100px);
+  transform: rotate(-45.13deg);
+}
+
+.tri-bar-graph-wrapper {
+  width: 100%;
+  height: 470px;
+  margin: 100px 0;
+  display: flex;
+  position: relative;
+}
+
+.tri-bar-graph-content {
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+
+.tri-bar-graph-legends {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.each-tri-bar-graph-legends {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tri-bar-graph-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tri-bar-graph-legend-color-box {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.tri-bar-graph-legend-text {
+  font: 500 12px "manrope";
+}
+.tri-bar-graph-scales-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+.scales-big-bar-with-number {
+  display: flex;
+  align-items: center;
+  margin-right: -34.99px;
+  margin-left: -35px;
+}
+
+.scales-big-bar {
+  width: 20px;
+  height: 1.5px;
+  background-color: black;
+  margin-left: 10px;
+}
+
+.scales-big-bar-number {
+  font: 900 12px "manrope";
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+.scale-vertical-line {
+  width: 1.5px;
+  height: 96.3%;
+  background-color: black;
+  position: absolute;
+  margin-left: 35px;
+  margin-bottom: 9.5px;
+}
+
+.scales-small-bar {
+  width: 10px;
+  height: 1px;
+  background-color: black;
+  margin-right: -34.99px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+
+.tri-bar-graph-horizontal-lines-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-left: 82px;
+}
+
+.initial-horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.each-thinner-horizontal-line {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.349);
+  margin-left: 30px;
+}
+
+.each-horizontal-line-group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.tri-bar-graph-bar-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  padding-left: 100px;
+}
+
+.tri-bar-graph-each-bar-group-content {
+  width: 100px;
+  height: 100%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tri-bar-label {
+  font: 600 14px "manrope";
+  margin-bottom: -20px;
+}
+
+.tri-bar-graph-each-bar-value {
+  font: 900 14px "manrope";
+  margin: 0 -10px;
+  margin-top: -20px;
+  -webkit-text-stroke: 0.2px #f5f5f5;
+  z-index: 30;
+}
+
+.tri-bar-graph-each-bar {
+  width: 10px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin-bottom: 10px;
+  margin-right: 3px;
+}
+
+.tri-bar-graph-each-bar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.tri-bar-graph-each-bar-group {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 450px) {
+  .each-graph {
+    width: 300px;
+    margin: 0 50px;
+    margin-bottom: 100px;
+  }
+  .each-bar {
+    width: 10px;
+    margin-bottom: 22px;
+  }
+  .each-bar-graph-content {
+    width: 400px;
+    margin-left: -80px;
+  }
+  .each-column-wrapper {
+    width: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    bottom: 0;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+  .each-graph-header-row-number {
+    width: 20px;
+    height: 20px;
+    padding: 0 10px;
+    font-size: 8px;
+    margin-right: 10px;
+  }
+  .each-graph-header-title {
+    font-size: 12px;
+    width: 150%;
+    white-space: pre;
+  }
+  .each-graph-header {
+    margin-right: 100px;
+    width: 100%;
+    margin-bottom: 150px;
+  }
+  .each-graph-header-title {
+    width: 100%;
+    margin-right: 100px;
+  }
+  .each-bar-label {
+    font-size: 6px;
+    width: 10px;
+    margin: 0;
+    height: 1px;
+    position: absolute;
+  }
+
+  .bar-graph-columns-wrapper {
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .each-doughnut-graph-content {
+    width: 100%;
+    height: 200px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .reports-ending-wrapper {
+    width: 300px;
+    margin-left: 0;
+    flex-direction: column;
+    margin-top: 50px !important;
+  }
+  .ending-yellow-gradient {
+    display: none;
+  }
+  .reports-ending-right-wrapper {
+    display: none;
+  }
+  .reports-ending-left-wrapper {
+    margin-bottom: 100px;
+  }
+  .get-started-text {
+    font-size: 36px;
+    width: 100%;
+  }
+  .usersmagic-small-blue-logo {
+    width: 20px;
+  }
+  .each-report-title {
+    font-size: 36px !important;
+    width: 100%;
+  }
+  .each-report-description {
+    font-size: 18px;
+    width: 100%;
+  }
+  .usersmagic-logo {
+    width: 100px;
+    height: 20px;
+  }
+  .each-key-insight-row-number {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    padding: 0 15px;
+  }
+  .each-key-insight-description {
+    font-size: 10px;
+  }
+  .reports-key-insight-title {
+    margin-top: 50px;
+    font-size: 24px;
+  }
+  .consumer-wrapper-title {
+    font-size: 24px;
+  }
+  .tri-bar-graph-wrapper {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: -100px;
+  }
+  .tri-bar-graph-legends {
+    flex-direction: row;
+  }
+  .tri-bar-graph-each-bar {
+    width: 5px;
+    margin-right: 1px;
+  }
+  .tri-bar-graph-each-bar-group-content {
+    margin-right: 10px;
+  }
+  .tri-bar-label {
+    font-size: 6px;
+    width: fit-content;
+    white-space: nowrap;
+  }
+  .tri-bar-graph-each-bar-value {
+    font-size: 6px;
+  }
+  .tri-bar-graph-scales-wrapper {
+    width: 110%;
+    min-height: 100%;
+    margin-top: 10px;
+  }
+  .tri-bar-graph-background {
+    width: 155%;
+    min-height: fit-content;
+  }
+  .tri-bar-graph-legend-text {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .each-tri-bar-graph-legends {
+    margin-right: 10px;
+    max-height: 20px;
+  }
+  .tri-bar-graph-legend-color-box {
+    margin-right: 5px;
+  }
+  .tri-bar-graph-legends {
+    margin: 0 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 100px;
+    margin-top: -100px;
+  }
+  .scale-vertical-line {
+    display: none;
+  }
+  .scales-big-bar {
+    width: 10px;
+  }
+  .scales-small-bar {
+    width: 5px;
+  }
+  .tri-bar-graph-bar-content {
+    width: 80%;
+  }
+  .tri-bar-graph-wrapper {
+    margin-top: 40px;
+  }
+  .tri-bar-graph-legends {
+    margin-left: 50px;
+    margin-bottom: 60px;
+  }
+  .doughnut-labels-wrapper {
+    position: absolute;
+    width: 150%;
+    height: 215%;
+    margin-top: -120px;
+  }
+  .scales-big-bar-number {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,174 @@
+.all-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  flex-direction: column;
+}
+
+.all-header {
+  width: 100vw;
+  height: 80px;
+  min-height: 80px;
+  padding: 0px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(254, 254, 254);
+  border-bottom: 1px solid transparent;
+}
+.all-header-responsive {
+  display: none;
+  width: 100%;
+  height: 80px;
+  min-height: 80px;
+  padding: 0px 30px;
+  background-color: rgb(254, 254, 254);
+  border-bottom: 1px solid transparent;
+  justify-content: space-between;
+}
+.menu-hamburger-bar {
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 100%;
+  background-color: rgb(46, 197, 206,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.responsive-opening-menu {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  left: -100%;
+  top: 80px;
+  background-color: #ffffff;
+  z-index: 300;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 50px;
+}
+
+.responsive-opening-menu a {
+  margin-bottom: 20px;
+}
+
+.tester-buttons-wrapper {
+  margin-bottom: 20px;
+}
+
+.signup-as-tester-blue-text {
+  font: 500 10px "manrope";
+  color: rgb(46, 197, 206);
+  margin-left: 30px;
+}
+
+.each-hamburger-bar-line {
+  width: 15px;
+  height: 2px;
+  background-color: rgb(3, 17, 73);
+  margin-bottom: -3px;
+  margin-top: -3px;
+  transition: 0.5s;
+}
+.all-header-responsive-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.all-header-content {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.all-header-logo {
+  height: 30px;
+  width: auto;
+  margin-right: 15px;
+}
+.all-header-logo-text {
+  color: rgb(3, 17, 73);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.all-header-each-button {
+  color: rgb(24, 25, 31);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0px 10px;
+  text-decoration: none;
+}
+.all-header-login-button {
+  color: rgb(3, 17, 73);
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.all-header-each-button:hover, .all-header-login-button:hover {
+  text-decoration: underline;
+}
+.all-header-register-button {
+  color: rgb(254, 254, 254);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: rgb(46, 197, 206);
+  text-decoration: none;
+}
+.all-header-register-button:hover {
+  box-shadow: 0 0 10px rgb(236, 236, 236);
+}
+
+.all-inner-wrapper {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 900px) {
+  .all-header {
+    padding: 0 75px;
+  }
+}
+@media only screen and (max-width: 900px) and (min-width: 800px) {
+  .all-header {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 800px) and (min-width: 300px) {
+  .all-header {
+    display: none;
+  }
+  .all-header-responsive {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  .all-header-content svg {
+    width: 70px !important;
+  }
+  .all-header-logo {
+    width: 15px;
+    height: auto;
+    align-self: center;
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 450px) and (min-width: 300px) {
+  .all-header-each-button {
+    margin: 0px;
+  }
+}
