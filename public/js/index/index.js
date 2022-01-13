@@ -27,15 +27,17 @@ window.onload = () => {
     }
   });
 
-  document.addEventListener('mousemove', event => {
-    if (event.clientX >= startPageJoinWaitlistButton.x && event.clientX <= startPageJoinWaitlistButton.x + startPageJoinWaitlistButton.width && event.clientY >= startPageJoinWaitlistButton.y && event.clientY <= startPageJoinWaitlistButton.y + startPageJoinWaitlistButton.height && window.innerHeight - document.querySelector('.all-content-wrapper').scrollTop > event.clientY) {
-      document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(46, 197, 206, 0.5)';
-      document.querySelector('.all-content-wrapper').style.cursor = 'pointer';
-    } else {
-      document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(254, 254, 254, 0.2)';
-      document.querySelector('.all-content-wrapper').style.cursor = 'default';
-    }
-  });
+  if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+    document.addEventListener('mousemove', event => {
+      if (event.clientX >= startPageJoinWaitlistButton.x && event.clientX <= startPageJoinWaitlistButton.x + startPageJoinWaitlistButton.width && event.clientY >= startPageJoinWaitlistButton.y && event.clientY <= startPageJoinWaitlistButton.y + startPageJoinWaitlistButton.height && window.innerHeight - document.querySelector('.all-content-wrapper').scrollTop > event.clientY) {
+        document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(46, 197, 206, 0.5)';
+        document.querySelector('.all-content-wrapper').style.cursor = 'pointer';
+      } else {
+        document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(254, 254, 254, 0.2)';
+        document.querySelector('.all-content-wrapper').style.cursor = 'default';
+      }
+    });
+   }
 
   document.addEventListener('submit', event => {
     if (event.target.id == 'join-waitlist-form') {
@@ -87,5 +89,5 @@ window.onload = () => {
         return error.innerHTML = 'An unknown error occcured, please try again later.';
       });
     }
-  })
+  });
 }

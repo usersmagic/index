@@ -89,7 +89,7 @@
 }
 .join-waitlist-button span {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   color: rgba(254, 254, 254, 1);
 }
 
@@ -472,6 +472,7 @@
   cursor: pointer;
   border: none;
   outline: none;
+  text-align: center;
 }
 .join-waitlist-send-button:hover {
   box-shadow: 0 0 15px rgba(46, 197, 206, 0.6);

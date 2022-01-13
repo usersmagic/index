@@ -18,20 +18,76 @@ window.onload = () => {
 
     if (event.target.classList.contains('join-waitlist-button') || (event.target.parentNode && (event.target.parentNode.classList.contains('join-waitlist-button')))) {
       document.getElementById('join-waitlist-scroll-place').scrollIntoView();
+      document.getElementById('email-input').focus();
     }
 
     if (event.clientX >= startPageJoinWaitlistButton.x && event.clientX <= startPageJoinWaitlistButton.x + startPageJoinWaitlistButton.width && event.clientY >= startPageJoinWaitlistButton.y && event.clientY <= startPageJoinWaitlistButton.y + startPageJoinWaitlistButton.height && window.innerHeight - document.querySelector('.all-content-wrapper').scrollTop > event.clientY) {
       document.getElementById('join-waitlist-scroll-place').scrollIntoView();
+      document.getElementById('email-input').focus();
     }
   });
 
-  document.addEventListener('mousemove', event => {
-    if (event.clientX >= startPageJoinWaitlistButton.x && event.clientX <= startPageJoinWaitlistButton.x + startPageJoinWaitlistButton.width && event.clientY >= startPageJoinWaitlistButton.y && event.clientY <= startPageJoinWaitlistButton.y + startPageJoinWaitlistButton.height && window.innerHeight - document.querySelector('.all-content-wrapper').scrollTop > event.clientY) {
-      document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(46, 197, 206, 0.5)';
-      document.querySelector('.all-content-wrapper').style.cursor = 'pointer';
-    } else {
-      document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(254, 254, 254, 0.2)';
-      document.querySelector('.all-content-wrapper').style.cursor = 'default';
+  if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+    document.addEventListener('mousemove', event => {
+      if (event.clientX >= startPageJoinWaitlistButton.x && event.clientX <= startPageJoinWaitlistButton.x + startPageJoinWaitlistButton.width && event.clientY >= startPageJoinWaitlistButton.y && event.clientY <= startPageJoinWaitlistButton.y + startPageJoinWaitlistButton.height && window.innerHeight - document.querySelector('.all-content-wrapper').scrollTop > event.clientY) {
+        document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(46, 197, 206, 0.5)';
+        document.querySelector('.all-content-wrapper').style.cursor = 'pointer';
+      } else {
+        document.getElementById('start-page-join-waitlist-button').style.boxShadow = '0 0 15px rgba(254, 254, 254, 0.2)';
+        document.querySelector('.all-content-wrapper').style.cursor = 'default';
+      }
+    });
+   }
+
+  document.addEventListener('submit', event => {
+    if (event.target.id == 'join-waitlist-form') {
+      event.preventDefault();
+      
+      const email = document.getElementById('email-input').value.trim();
+      const name = document.getElementById('name-input').value.trim();
+      const companyName = document.getElementById('company-name-input').value.trim();
+      const companyURL = document.getElementById('company-url-input').value.trim();
+      const details = document.getElementById('details-input').value.trim();
+
+      const error = document.getElementById('waitlist-form-error');
+      const success = document.getElementById('waitlist-form-success');
+
+      error.innerHTML = '';
+      success.innerHTML = '';
+
+      if (!email || !email.length)
+        return error.innerHTML = 'Lütfen e-posta adresinizi girin.';
+
+      if (!name || !name.length)
+        return error.innerHTML = 'Lütfen ad ve soyadınızı girin.';
+
+      if (!companyName || !companyName.length)
+        return error.innerHTML = 'Lütfen şirket isminizi yazın.';
+
+      if (!companyURL || !companyURL.length)
+        return error.innerHTML = 'Lütfen şirket websitenizi yazın.';
+
+      serverRequest('/waitlist', 'POST', {
+        email,
+        name,
+        company_name: companyName,
+        company_url: companyURL,
+        details: details && details.length ? details : null
+      }, res => {
+        if (res.success)
+          return success.innerHTML = 'Bekleme sırasına katıldığınız için teşekkür ederiz! Ekibimiz size 24 saat içinde ulaşacak.'
+        
+        if (res.error == 'email_validation')
+          return error.innerHTML = 'Lütfen geçerli bir e-posta adresi yazın.';
+
+        if (res.error == 'bad_request')
+          return error.innerHTML = 'Lütfen bütün zorunlu alanları doldurun.';
+
+        if (res.error == 'duplicated_unique_field')
+          return error.innerHTML = 'Bu e-posta adresi zaten kaydedilmiş. Ekibimiz size en kısa zamanda ulaşacak, sabrınız için teşekkürler.';
+
+        return error.innerHTML = 'Bilinmeyen bir hata oluştu, lütfen daha sonra tekrar deneyin.';
+      });
     }
   });
 }
