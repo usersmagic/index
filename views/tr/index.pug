@@ -108,22 +108,24 @@ block content
         .empty-space#join-waitlist-scroll-place
         .empty-space
         .empty-space
-        .join-waitlist-form-wrapper
+        form.join-waitlist-form-wrapper#join-waitlist-form(autocomplete="off")
           span.join-waitlist-title Bekleme Listesine Katıl
           span.join-waitlist-text
             span Yeni Usersmagic Pop-Up sistemi hakkında gelişmelerden haberdar olmak ve ekip ile iletişime geçebilmek için “Bekleme Listesine Katıl”. Ekibimiz
             span  24 saat içinde
             span  sizlerle iletişime geçecektir.
           .join-waitlist-input-wrapper
-            input.join-waitlist-input#email-input(type="text" autocomplete="none" placeholder="E-Posta")
-            input.join-waitlist-input#name-input(type="text" autocomplete="none" placeholder="Ad Soyad")
+            input.join-waitlist-input#email-input(type="search" autocomplete="off" placeholder="E-Posta")
+            input.join-waitlist-input#name-input(type="search" autocomplete="off" placeholder="Ad Soyad")
           .join-waitlist-input-wrapper
-            input.join-waitlist-input#company-name-input(type="text" autocomplete="none" placeholder="Şirket Adı")
-            input.join-waitlist-input#company-url-input(type="text" autocomplete="none" placeholder="Şirket Websitesi")
+            input.join-waitlist-input#company-name-input(type="search" autocomplete="off" placeholder="Şirket Adı")
+            input.join-waitlist-input#company-url-input(type="search" autocomplete="off" placeholder="Şirket Websitesi")
           .join-waitlist-input-wrapper
             textarea.join-waitlist-details-input#details-input(placeholder="Eklemek istedikleriniz (Opsiyonal)")
           .join-waitlist-input-wrapper
-            span.join-waitlist-send-button Bekleme Listesine Katıl
+            span.join-waitlist-error.highlighted-red#waitlist-form-error
+            span.join-waitlist-error.highlighted-blue#waitlist-form-success
+            button.join-waitlist-send-button Bekleme Listesine Katıl
         .empty-space
         .empty-space
         .empty-space
