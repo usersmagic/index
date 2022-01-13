@@ -119,7 +119,6 @@
   justify-content: center;
   align-items: center;
   padding: 0 150px;
-  z-index: 1;
 }
 .start-page-title {
   width: 800px;
@@ -158,7 +157,7 @@
   min-height: 100vh;
   margin-top: -72px;
   overflow: scroll;
-  background: rgba(17, 17, 17, 1);
+  background-color: transparent;
   z-index: 2;
 }
 
