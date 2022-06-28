@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
   return res.render('index/index', {
     page: 'index/index',
-    title: 'Feel your customers more than ever',
+    title: 'A decentralized platform where people will monetize their own data',
     meta: 'en',
     includes: {
       external: {
